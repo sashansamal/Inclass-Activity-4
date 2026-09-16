@@ -1,13 +1,11 @@
 ﻿using System;
-using System;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using VehicleManufacturingSystem;
 
-namespace ConsoleApp6
+namespace VehicleManufacturingSystem
 {
     internal class Program
     {
@@ -15,9 +13,13 @@ namespace ConsoleApp6
         {
             IVehicleFactory factory = new ElectricVehicleFactory();
 
-            factory.CreateTruck();
-            factory.CreateCar();
-            factory.CreateEngine();
+            IVehicle car = factory.CreateCar();
+            IVehicle truck = factory.CreateTruck();
+            IEngine engine = factory.CreateEngine();
+
+            car.ShowDetails();
+            truck.ShowDetails();
+            engine.Start();
         }
     }
 }

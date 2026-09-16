@@ -4,15 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using System;
-
 namespace VehicleManufacturingSystem
 {
     public class ElectricTruck : IVehicle
     {
         public void ShowDetails()
         {
-            Console.WriteLine("Vehicle: Electric Truck");
+            Console.WriteLine("electric truck.");
         }
     }
 }
